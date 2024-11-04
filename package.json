@@ -1,12 +1,12 @@
 {
 	"name": "instanuxt",
 	"version": "1.0.0",
-	"description": "Quickly Create a Nuxt + NuxtUI project",
+	"description": "InstaNuxt gets you up and running with the latest version of Nuxt, NuxtUI and TailwindCSS in no time.",
 	"bin": {
 		"instanuxt": "./instanuxt.js"
 	},
 	"author": "Peter Koraca",
-	"license": "ISC",
+	"license": "MIT",
 	"devDependencies": {
 		"prettier": "3.3.3"
 	}
