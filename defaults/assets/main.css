@@ -1,0 +1,44 @@
+html,
+body,
+#__nuxt {
+	@apply w-full h-full;
+}
+
+body {
+	@apply min-h-screen;
+}
+
+/* Helper flex classes */
+.flex-h-4 {
+	@apply flex items-center gap-4;
+}
+
+.flex-h-between {
+	@apply flex items-center gap-4 justify-between;
+}
+
+.flex-v-2 {
+	@apply flex flex-col gap-2;
+}
+
+.flex-v-3 {
+	@apply flex flex-col gap-3;
+}
+
+.flex-v-4 {
+	@apply flex flex-col gap-4;
+}
+
+.flex-v-6 {
+	@apply flex flex-col gap-6;
+}
+
+.flex-v-12 {
+	@apply flex flex-col gap-12;
+}
+
+/* Default Fade Transition */
+.v-enter-active,
+.v-leave-active {
+	transition: opacity 0.3s ease;
+}

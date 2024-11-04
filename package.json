@@ -1,0 +1,13 @@
+{
+	"name": "instanuxt",
+	"version": "1.0.0",
+	"description": "Quickly Create a Nuxt + NuxtUI project",
+	"bin": {
+		"instanuxt": "./instanuxt.js"
+	},
+	"author": "Peter Koraca",
+	"license": "ISC",
+	"devDependencies": {
+		"prettier": "3.3.3"
+	}
+}
