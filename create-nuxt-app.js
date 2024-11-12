@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
-const readline = require("readline");
+import { execSync } from "child_process";
+import fs from "fs";
+import path from "path";
+import readline from "readline";
+import chalk from "chalk";
+import { fileURLToPath } from "url";
 
 const rl = readline.createInterface({
 	input: process.stdin,
@@ -20,7 +22,9 @@ function runCommand(command) {
 }
 
 function copyDefaults(source, destination) {
-	console.log(`Attempting to copy from ${source} to ${destination}`);
+	console.log(
+		`Copying default template files from ${source} to ${destination}`,
+	);
 
 	if (!fs.existsSync(source)) {
 		console.error(`Defaults folder ${source} does not exist.`);
@@ -50,7 +54,9 @@ function copyDefaults(source, destination) {
 
 	try {
 		copyRecursive(source, destination);
-		console.log(`Copied default files from ${source} to ${destination}`);
+		console.log(
+			`Copied default template files from ${source} to ${destination}`,
+		);
 	} catch (error) {
 		console.error(`Error copying default files: ${error}`);
 	}
@@ -92,7 +98,7 @@ function setupNuxtProject() {
 
 		// Copy default files
 		console.log("Copying default files...");
-		const scriptDir = path.dirname(require.main.filename);
+		const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 		const defaultsSource = path.join(scriptDir, "defaults");
 		console.log(
 			`Attempting to copy from ${defaultsSource} to ${process.cwd()}`,
@@ -108,11 +114,19 @@ function setupNuxtProject() {
 
 		copyDefaults(defaultsSource, process.cwd());
 
-		console.log("------------------");
-		console.log("Project setup complete!");
-		console.log(`Run \`cd ${projectName}\` to enter the project directory.`);
-		console.log("Run `npm run dev` to start the development server.");
-		console.log("------------------");
+		console.log("-");
+		console.log(chalk.cyan("✨ ") + chalk.bold("Project setup complete!"));
+		console.log(
+			chalk.dim("→") +
+				` Run ${chalk.cyan(`cd ${projectName}`)} to enter the project directory.`,
+		);
+		console.log(
+			chalk.dim("→") +
+				` Run ${chalk.cyan("npm run dev")} to start the development server.`,
+		);
+
+		console.log("-");
+
 		rl.close();
 	});
 }
