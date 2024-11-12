@@ -1,17 +1,17 @@
-# InstaNuxt
+# Create Nuxt App
 
-InstaNuxt gets you up and running with the latest version of Nuxt, NuxtUI and TailwindCSS in no time.
+Create Nuxt App gets you up and running with the latest version of Nuxt, NuxtUI and TailwindCSS in no time.
 
 ## Installation
 
 ```bash
-npm install -g @insta/cli
+npm install -g create-nuxt-app
 ```
 
 ## Usage
 
 ```bash
-instanuxt
+create-nuxt-app
 ```
 
 ## License

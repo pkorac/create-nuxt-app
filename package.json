@@ -1,9 +1,9 @@
 {
-	"name": "instanuxt",
+	"name": "create-nuxt-app",
 	"version": "1.0.0",
-	"description": "InstaNuxt gets you up and running with the latest version of Nuxt, NuxtUI and TailwindCSS in no time.",
+	"description": "Create Nuxt App gets you up and running with the latest version of Nuxt, NuxtUI and TailwindCSS in no time.",
 	"bin": {
-		"instanuxt": "./instanuxt.js"
+		"create-nuxt-app": "./create-nuxt-app.js"
 	},
 	"author": "Peter Koraca",
 	"license": "MIT",
